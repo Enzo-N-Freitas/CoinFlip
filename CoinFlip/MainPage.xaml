@@ -18,7 +18,8 @@
                 x:Name = "CoinImage"
                 Source = "moedas.png"
                 HeightRequest = "155"
-                HorizontalOptions = "Center"/>
+                HorizontalOptions = "Center"
+                IsAnimationPlaying = "False"/>
 
             <Picker
                 x:Name = "SelectedSide"

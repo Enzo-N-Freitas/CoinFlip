@@ -8,23 +8,37 @@ namespace CoinFlip
 {
     internal class Moeda
     {
-        private int lado;
+        private string lado;
 
-        public Moeda(int Lado)
+        public Moeda(string Lado)
         {
             lado = Lado;
         }
 
         public string Jogar()
         {
-            int Result = new Random().Next(0, 2);
-            if (Result == lado)
+            int Result = new Random().Next(2);
+            if (Result == 0)
             {
-                return "Você venceu";
+                if (lado == "Cara")
+                {
+                    return "Parabéns! Você escolheu Cara e a moeda deu Cara!";
+                }
+                else
+                {
+                    return "Que pena! Você escolheu Coroa, mas a moeda deu Cara!";
+                }
             }
             else
             {
-                return "Você perdeu";
+                if (lado == "Coroa")
+                {
+                    return "Parabéns! Você escolheu Coroa e a moeda deu Coroa!";
+                }
+                else
+                {
+                    return "Que pena! Você escolheu Cara, mas a moeda deu Coroa";
+                }
             }
         }
     }
